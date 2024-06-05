@@ -1,3 +1,16 @@
 <p>product works!</p>
 
-<components-prices/>
+<components-prices
+    *ngIf="isProductVisable"
+    [prices]="currentPrice"
+/>
+
+<button (click)="isProductVisable = !isProductVisable ">
+    toglee
+</button>
+
+<button (click)="increasePrices()">
+    +1
+</button>
+
+
